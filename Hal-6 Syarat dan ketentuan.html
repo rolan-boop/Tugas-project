@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Syarat & Ketentuan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #6c9ba9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #1d303b;
+      width: 100%;
+      max-width: 760px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h3, p, li, label{
+      color: white;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 5px;
+      text-align: center;
+    }
+
+    p.lead {
+      font-size: 14px;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+
+    .terms {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: #1d303b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .terms h3 {
+      margin: 12px 0 6px;
+      font-size: 15px;
+    }
+
+    .agree {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 720px) {
+      .card {
+        height: 94vh;
+        padding: 15px;
+      }
+      .terms { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Syarat &amp; Ketentuan Keanggotaan</h1>
+    <p class="lead">Silakan baca dengan seksama sebelum melanjutkan.</p>
+
+    <div class="terms">
+      <h3>1. Keanggotaan</h3>
+      <ol>
+        <li>Keanggotaan berlaku untuk individu berusia minimal 17 tahun.</li>
+        <li>Setiap individu hanya boleh memiliki satu akun member.</li>
+        <li>Pendaftaran memerlukan data yang valid seperti nama, telepon, dan email.</li>
+      </ol>
+
+      <h3>2. Kewajiban Member</h3>
+      <ol>
+        <li>Menjaga kerahasiaan akun dan kata sandi.</li>
+        <li>Memberikan informasi yang benar dan terbaru.</li>
+      </ol>
+
+      <h3>3. Manfaat Keanggotaan</h3>
+      <ol>
+        <li>Mendapat promo khusus, poin reward, atau voucher diskon.</li>
+        <li>Hak dan manfaat keanggotaan dapat berubah sewaktu-waktu.</li>
+      </ol>
+
+      <h3>4. Penggunaan Website</h3>
+      <ol>
+        <li>Dilarang menggunakan website untuk kegiatan ilegal atau merugikan pihak lain.</li>
+      </ol>
+
+      <h3>5. Perubahan Syarat</h3>
+      <ol>
+        <li>Restoran dapat mengubah syarat kapan saja; versi terbaru akan tampil di situs resmi.</li>
+      </ol>
+
+      <h3>🔒 Kebijakan Privasi</h3>
+      <ol>
+        <li>Kami mengumpulkan data pribadi untuk keperluan pelayanan dan promosi.</li>
+        <li>Data tidak dijual ke pihak ketiga tanpa izin kecuali diwajibkan oleh hukum.</li>
+        <li>Anda berhak meminta pembaruan atau penghapusan data pribadi.</li>
+      </ol>
+    </div>
+
+    <div class="agree">
+      <input type="checkbox" id="agree">
+      <label for="agree">Saya telah membaca dan menyetujui Syarat &amp; Ketentuan serta Kebijakan Privasi.</label>
+    </div>
+
+    <p class="note">Dengan mencentang kotak di atas, Anda menyatakan telah membaca dan menyetujui semua ketentuan yang berlaku.</p>
+  </div>
+</body>
+</html>

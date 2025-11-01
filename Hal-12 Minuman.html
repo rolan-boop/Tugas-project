@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelompok IV Restorant - Minuman</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #6c9ba9;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 80px;
+    }
+
+    header h1 {
+      font-size: 18px;
+      color: #000;
+      letter-spacing: 1px;
+      position: relative;
+      right: 60px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 25px;
+    }
+
+    nav a.active {
+      color: #8a5615;
+    }
+
+    .login {
+      background-color: #cfd3d4;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 15px;
+      font-weight: bold;
+      color: #000;
+      margin-left: 25px;
+      cursor: pointer;
+    }
+
+    .tabs {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .tabs a {
+      margin: 0 20px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .tabs a.active {
+      color: #8a5615;
+    }
+
+    .section {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .btn-section {
+      background-color: #8a5615;
+      border: none;
+      padding: 10px 25px;
+      color: white;
+      font-weight: bold;
+      border-radius: 2px;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      cursor: default;
+    }
+
+    .menu-box {
+      background-color: #223133;
+      border-radius: 15px;
+      padding: 25px 60px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin: 0 auto;
+    }
+
+    .menu-box ol {
+      padding-left: 20px;
+      line-height: 2;
+    }
+
+    .menu-box li {
+      font-size: 16px;
+      color: #e1e6e5;
+      padding-bottom: 5px;
+    }
+
+    li hr {
+      display: inline-block;
+      border: 1px dashed white;
+      width: 70%;
+    }
+
+    .non-coffee {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .pesan-minuman {
+      text-align: center;
+      background-color: #6c9ba9;
+      padding: 40px 0;
+    }
+
+    .pesan-minuman h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #162a2c;
+      margin-bottom: 30px;
+    }
+
+    .pesan-minuman form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pesan-minuman label {
+      align-self: flex-start;
+      margin-left: 12%;
+      font-size: 15px;
+      color: rgb(94, 95, 93);
+    }
+
+    .pesan-minuman select,
+    .pesan-minuman input {
+      width: 80%;
+      height: 45px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1f2f32;
+      color: white;
+      padding: 0 15px;
+      font-size: 15px;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .tombol {
+      display: flex;
+      gap: 300px;
+      margin-top: 15px;
+    }
+
+    .tombol button {
+      width: 120px;
+      height: 40px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .batal {
+      background-color: transparent;
+      color: #162a2c;
+      border: 2px solid #162a2c;
+    }
+
+    .pesan {
+      background-color: #8a5a13;
+      color: white;
+      border: none;
+    }
+
+    .batal:hover {
+      background-color: #162a2c;
+      color: white;
+    }
+
+    .pesan:hover {
+      background-color: #6b4510;
+    }
+
+    footer {
+      background-color: #162a2c;
+      text-align: center;
+      padding: 30px 20px;
+      color: #d3d3d3;
+      font-size: 0.9rem;
+    }
+
+    footer img {
+      width: 15px;
+    }
+
+    @media (max-width: 768px) {
+    header {
+      padding: 15px 25px;
+    }
+
+    .tabs a {
+      margin: 0 10px;
+    }
+
+    .menu-box {
+      padding: 15px 20px;
+    }
+
+    li hr {
+      width: 50%;
+    }
+
+    .pesan-minuman select,
+    .pesan-minuman input {
+      width: 90%;
+    }
+
+    .tombol {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>KELOMPOK IV RESTAURANT</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#" class="active">Pemesanan</a>
+      <a href="#">Tentang Kami</a>
+      <button class="login">LOGIN</button>
+    </nav>
+  </header>
+
+  <div class="tabs">
+    <a href="#">MAKANAN</a>
+    <a href="#" class="active">MINUMAN</a>
+  </div>
+
+  <div class="section">
+    <button class="btn-section">COFFEE</button>
+    <div class="menu-box">
+      <ol>
+        <li>Arabica Coffee &emsp;&emsp;&nbsp;<hr> 15K</li>
+        <li>Robusta Coffee &emsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr> 17K</li>
+        <li>Cappuccino Coffee &nbsp;&nbsp;<hr> 12K</li>
+        <li>Iced Coffee &emsp;&emsp;&emsp;&emsp;<hr> 14K</li>
+        <li>Affogato Coffee &emsp;&emsp;&nbsp;<hr> 11K</li>
+        <li>Mocha &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr> 13K</li>
+        <li>Caramel Latte &emsp;&emsp;&nbsp;&nbsp;&nbsp;<hr> 12K</li>
+        <li>Macchiato Coffee &emsp;&nbsp;<hr> 18K</li>
+      </ol>
+    </div>
+
+    <div class="non-coffee">
+      <button class="btn-section">NON - COFFEE</button>
+    </div>
+
+    <div class="menu-box">
+      <ol>
+        <li>Orange Juice &emsp;&nbsp;&nbsp;<hr> 15K</li>
+        <li>Apple Juice &emsp;&emsp;&nbsp;<hr> 17K</li>
+        <li>Vanilla Milk &emsp;&emsp;&nbsp;&nbsp;<hr> 12K</li>
+        <li>Matcha &emsp;&emsp;&emsp;&emsp;&nbsp;<hr> 14K</li>
+        <li>Iced Chocolate &emsp;<hr> 11K</li>
+        <li>Hot Chocolate &emsp;&nbsp;<hr> 13K</li>
+        <li>Avocado Juice &nbsp;&nbsp;&nbsp;&nbsp;<hr> 12K</li>
+        <li>Mango Juice &emsp;&emsp;<hr> 18K</li>
+      </ol>
+    </div>
+  </div>
+
+  <section class="pesan-minuman">
+    <h2>PESAN MINUMAN</h2>
+
+    <form>
+      <label for="nama-minuman">Nama Minuman</label>
+      <select id="nama-minuman" name="nama-minuman">
+        <option value="">Pilih Minuman</option>
+        <option>Arabica Coffee</option>
+        <option>Robusta Coffee</option>
+        <option>Cappuccino Coffee</option>
+        <option>Iced Coffee</option>
+        <option>Affogato Coffee</option>
+        <option>Mocha</option>
+        <option>Caramel Latte</option>
+        <option>Macchiato Coffee</option>
+        <option>Orange Juice</option>
+        <option>Apple Juice</option>
+        <option>Vanilla Milk</option>
+        <option>Matcha</option>
+        <option>Iced Chocolate</option>
+        <option>Hot Chocolate</option>
+        <option>Avocado Juice</option>
+        <option>Mango Juice</option>
+      </select>
+
+      <label for="jumlah">Jumlah</label>
+      <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan jumlah">
+
+      <div class="tombol">
+        <button type="reset" class="batal">BATAL</button>
+        <button type="submit" class="pesan">PESAN</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p><strong>ABOUT US</strong></p>
+    <p><img src="mobile.png" alt=""> 085274292446 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="social.png" alt=""> @kelompok4restaurant</p>
+    <p>Jalan Thamrin No. 8, Kelurahan Medan Kota, Kota Medan, Sumatera Utara 20212</p>
+  </footer>
+
+</body>
+</html>

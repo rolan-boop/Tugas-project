@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kelompok IV Restorant - Chinese Food</title>
+  <title>Kelompok IV Restaurant - Chinese Food</title>
   <link rel="stylesheet" href="Header.css">
   <link rel="stylesheet" href="CSS C-Food.css">
   <link rel="stylesheet" href="Footer.css">
@@ -13,10 +13,17 @@
   <header>
     <h1>KELOMPOK IV RESTAURANT</h1>
     <nav>
-      <a href="#">Beranda</a>
-      <a href="#" class="active">Pemesanan</a>
-      <a href="#">Tentang Kami</a>
-      <button class="login">LOGIN</button>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#">Beranda</a>
+        <a href="#" class="active">Pemesanan</a>
+        <a href="#">Tentang Kami</a>
+        <button class="login">LOGIN</button>
+      </div>
     </nav>
   </header>
 
@@ -144,5 +151,11 @@
   <div class="footer-bottom">
     © 2025 Restaurant K4. All Rights Reserved. Designed by <span>K4</span>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

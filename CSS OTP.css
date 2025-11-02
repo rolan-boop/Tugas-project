@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: #6c9ba9;
+    color: #111827;
+}
+
+.card {
+    width: 100%;
+    max-width: 520px;
+    background-color: #1d303b;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 28px;
+    text-align: center;
+}
+
+h1, p, .ghost{
+    color: white;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+form {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.otp-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.otp-row input {
+    width: 100%;
+    padding: 16px 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #bfb1ab;
+    outline: none;
+    background-color: rgb(62, 121, 120);
+}
+
+.otp-row input:focus {
+    border-color: #0b74de;
+    box-shadow: 0 0 8px rgba(11, 116, 222, 0.3);
+}
+
+.back-link {
+    font-size: 13px;
+    color: #97a8a0;
+}
+
+.back-link a {
+    color: #0b74de;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary:hover{
+    background-color: white;
+}
+
+.ghost:hover{
+    background-color: #2dd2e4d7;
+}
+
+.primary {
+    background-color: #2dd2e4d7;
+}
+
+.ghost {
+    background-color: transparent;
+    border: 1px solid #e6e9ef;
+}
+
+footer {
+    font-size: 13px;
+    color: #6b8076;
+}
+
+@media (max-width: 440px) {
+    .card {
+    padding: 20px;
+    }
+    .otp-row input {
+    padding: 14px;
+    font-size: 18px;
+    }
+    .actions {
+    flex-direction: column;
+    }
+    button {
+    width: 100%;
+    }
+}

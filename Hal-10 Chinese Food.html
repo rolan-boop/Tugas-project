@@ -4,232 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelompok IV Restorant - Chinese Food</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background-color: #7a9c9f;
-      color: #fff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background-color: transparent;
-    }
-
-    .login-btn{
-        font-weight: bold;
-    }
-
-    header h1 {
-      font-size: 1.2rem;
-      margin-left: -40px;
-      color: black;
-    }
-
-    nav a {
-      margin: 0 10px;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      right: 50px;
-    }
-
-    nav a:hover {
-      color: #916b25;
-    }
-
-    .login-btn {
-      background-color: #d9d9d9;
-      color: #000;
-      border: none;
-      padding: 6px 16px;
-      border-radius: 15px;
-      cursor: pointer;
-    }
-
-    .categories {
-      text-align: center;
-      margin: 30px 0 10px;
-    }
-
-    .categories a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .subcategories {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .subcategories a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    a.active {
-      color: #916b25;
-    }
-
-    .menu-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      justify-items: center;
-      padding: 0 60px 60px;
-    }
-
-
-    .card1, .card2, .card3, .card4 {
-      background-color: #2e3d3e;
-      border-radius: 20px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
-    }
-
-    .card1, .card2{
-        position: relative;
-        left: 290px;
-    }
-
-    .card3, .card4{
-        position: relative;
-        top: 500px;
-        right: 295px;
-    }
-
-    .card1:hover, .card2:hover, .card3:hover, .card4:hover {
-      transform: translateY(-5px);
-    }
-
-    .card1 img, .card2 img, .card3 img, .card4 img {
-      width: 100%;
-      height: 180px;
-      border-radius: 20px 20px 0 0;
-      object-fit: cover;
-    }
-
-    .card1 h3, .card2 h3, .card3 h3, .card4 h3 {
-      margin: 15px 0 10px;
-      color: #fff;
-      font-size: 1.1rem;
-    }
-
-    .card1 p, .card2 p, .card3 p, .card4 p {
-      font-size: 0.85rem;
-      text-align: justify;
-      padding: 0 15px;
-      color: #d3d3d3;
-      line-height: 1.4;
-    }
-
-    .price1, .price2, .price3, .price4 {
-      margin: 15px 0 10px;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .price2, .btn2, .price3, .btn3, .price4, .btn4{
-        position: relative;
-        top: 20px;
-    }
-
-    .btn1, .btn2, .btn3, .btn4 {
-      background-color: #916b25;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 25px;
-      margin-bottom: 20px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .btn:hover {
-      background-color: #a87a2a;
-    }
-
-    footer {
-      background-color: #2e3d3e;
-      text-align: center;
-      padding: 30px 20px;
-      color: #d3d3d3;
-      font-size: 0.9rem;
-      position: relative;
-      top: 600px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer img{
-      width: 15px;
-      color: white;
-      position: relative;
-      top: 2px;
-    }
-
-    @media (max-width: 1366px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 60px;
-      }
-
-      nav a {
-        position: relative;
-        right: 50px;
-      }
-
-      .menu-container {
-        display: grid;
-        grid-template-columns: repeat(2, 320px);
-        justify-content: center;
-        align-items: start;
-        gap: 60px;
-        padding: 60px 60px 100px;
-      }
-
-      .card1, .card2, .card3, .card4 {
-        position: static ;
-        transform: none ;
-        margin: 0 auto;
-        width: 320px;
-        height: auto;
-      }
-
-      .btn2, .btn3, .btn4 {
-        position: static;
-        margin-top: 15px;
-      }
-
-      footer {
-        position: relative;
-        top: 0;
-        margin-top: 60px;
-      }
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="Header.css">
+  <link rel="stylesheet" href="CSS C-Food.css">
+  <link rel="stylesheet" href="Footer.css">
 </head>
 
 <body>
@@ -239,7 +16,7 @@
       <a href="#">Beranda</a>
       <a href="#" class="active">Pemesanan</a>
       <a href="#">Tentang Kami</a>
-      <button class="login-btn">LOGIN</button>
+      <button class="login">LOGIN</button>
     </nav>
   </header>
 
@@ -257,7 +34,7 @@
 
   <section class="menu-container">
     <div class="card1">
-      <img src="kung pao.jpg" alt="Ayam Kung Pao">
+      <img src="img/kung pao.jpg" alt="Ayam Kung Pao">
       <h3>AYAM KUNG PAO</h3>
       <p>Ayam Kungpao adalah hidangan khas Tiongkok yang terkenal dengan cita rasa gurih, pedas, dan sedikit manis. Terbuat dari potongan daging ayam dengan saus kental berbumbu bawang, kecap, dan cabai kering.</p>
       <div class="price1">Rp. 17.000,00</div>
@@ -265,7 +42,7 @@
     </div>
 
     <div class="card2">
-      <img src="pangsit.jpg" alt="Mie Pangsit Ayam">
+      <img src="img/pangsit.jpg" alt="Mie Pangsit Ayam">
       <h3>MIE PANGSIT AYAM</h3>
       <p>Mie Pangsit Ayam terdiri dari mie kenyal, ayam berbumbu gurih, dan pangsit rebus atau goreng. Disajikan dengan kuah kaldu hangat yang lezat dan menenangkan.</p>
       <div class="price2">Rp. 15.000,00</div>
@@ -273,7 +50,7 @@
     </div>
 
     <div class="card3">
-      <img src="hainan.jpg" alt="Nasi Hainan">
+      <img src="img/hainan.jpg" alt="Nasi Hainan">
       <h3>NASI HAINAN</h3>
       <p>Nasi Hainan adalah hidangan nasi khas Tiongkok-Singapura yang lembut dan harum, disajikan dengan ayam rebus, saus sambal, dan kaldu yang kaya rasa.</p>
       <div class="price3">Rp. 25.000,00</div>
@@ -281,18 +58,91 @@
     </div>
 
     <div class="card4">
-      <img src="capcay.jpg" alt="Capcay">
+      <img src="img/capcay.jpg" alt="Capcay">
       <h3>CAPCAY</h3>
       <p>Capcay adalah tumisan sayuran dengan tambahan daging ayam, udang, dan saus kental yang lezat. Mengandung banyak vitamin dan cocok untuk hidangan sehat.</p>
       <div class="price4">Rp. 23.000,00</div>
       <button class="btn4">PESAN</button>
     </div>
+
+    <div class="card5">
+      <img src="img/peking.jpg" alt="Ayam Kung Pao">
+      <h3>BEBEK PEKING</h3>
+      <p>Bebek Peking adalah hidangan legendaris dari Beijing yang terkenal dengan kulit bebeknya yang renyah dan dagingnya yang lembut. Disajikan bersama saus manis, potongan mentimun, daun bawang, dan kulit pangsit tipis, menciptakan kombinasi rasa dan tekstur yang mewah dan khas Tiongkok.</p>
+      <div class="price5">Rp. 50.000,00</div>
+      <button class="btn5">PESAN</button>
+    </div>
+
+    <div class="card6">
+      <img src="img/mapo.jpg" alt="Ayam Kung Pao">
+      <h3>MAPO TAHU</h3>
+      <p>Mapo Tahu adalah hidangan klasik asal Sichuan yang terkenal dengan cita rasa pedas, gurih, dan sedikit numbing dari lada Sichuan. Terbuat dari tahu lembut yang dimasak dengan saus pedas berbumbu cabai, bawang putih, dan daging cincang, menghasilkan perpaduan rasa yang kaya dan menggugah selera.</p>
+      <div class="price6">Rp. 17.000,00</div>
+      <button class="btn6">PESAN</button>
+    </div>
   </section>
 
+  <div class="top-reservasi">
+    <h3>PEMESANAN DAN RESERVASI</h3>
+    <div class="contact-bar">
+      <a href="#"><img src="img/mobile.png" alt="" class="gambar"> 0411 421414</a>
+      <a href="#"><img src="img/social.png" alt="" class="gambar"> 0899 087 0959</a>
+    </div>
+  </div>
+
   <footer>
-    <p><strong>ABOUT US</strong></p>
-    <p><img src="mobile.png" alt=""> 085274292446 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="social.png" alt=""> @kelompok4restaurant</p>
-    <p>Jalan Thamrin No. 8, Kelurahan Medan Kota, Kota Medan, Sumatera Utara 20212</p>
+    <div class="awal">
+      <h3>RESTAURANT K4</h3>
+      <p>Jalan Thamrin No. 8<br>Kota Medan, Sumatera Utara 20212</p>
+      <p>Telp : (0411) 112234 <br>Email : kelompok4restaurant.com</p>
+      <br>
+      <h4>Contact Person:</h4>
+      <p>Amar 0812 8711 5566<br>Amir 0851 0837 7788<br>Umar 0852 5586 8899</p>
+    </div>
+
+    <div class="melayani">
+      <h3>MELAYANI</h3>
+      <span>Prasmanan</span>
+      <span>Nasi Dos</span>
+      <span>Snack Dos</span>
+      <span>Coffee Break</span>
+      <span>Dll.</span>
+      <br>
+      <br>
+      <h3>DOWNLOAD</h3>
+      <ul>
+        <li>Daftar Menu</li>
+        <li class="list">Brosur Catering</li>
+        <li class="list">Brosur Wedding</li>
+        <li>Catalogue</li>
+      </ul>
+
+    </div>
+
+    <div class="cari">
+      <h3>LINKS</h3>
+      <ul>
+        <li class="list">Beranda</li>
+        <li class="list">Menu</li>
+        <li class="list">Catering</li>
+        <li class="list">Fasilitas</li>
+        <li class="list">Galeri</li>
+        <li class="list">Testimoni</li>
+        <li class="list">Info</li>
+        <li class="list">Kontak</li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <h3>IKUTI KAMI</h3>
+      <a href="#"> <img src="img/facebook.png" alt="" class="gambar">Facebook</a>
+      <a href="#"> <img src="img/instagram.png" alt="" class="gambar">Instagram</a>
+      <a href="#"> <img src="img/youtube.png" alt="" class="gambar">YouTube</a>
+    </div>
   </footer>
+
+  <div class="footer-bottom">
+    © 2025 Restaurant K4. All Rights Reserved. Designed by <span>K4</span>
+  </div>
 </body>
 </html>

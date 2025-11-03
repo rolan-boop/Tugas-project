@@ -1,0 +1,97 @@
+.top-reservasi {
+  background-color: #162a2c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.top-reservasi h3 {
+  letter-spacing: 1px;
+}
+
+.contact-bar {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-bar a {
+  display: flex;
+  align-items: center;
+  background-color: #162a2c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  border: 1px solid white;
+}
+
+footer {
+  background-color: #dbd1d1;
+  color: #000;
+  padding: 25px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+footer h3 {
+  color: #000;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+footer p, footer li, footer a {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.melayani span {
+  display: inline-block;
+  background-color: #162a2c;
+  color: #fff;
+  padding: 5px 8px;
+  margin: 3px 3px 3px 0;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.melayani, .cari, .social, .awal{
+  margin-left: 70px;
+}
+
+.social a {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  background-color: #212121;
+  color: rgb(156, 155, 155);
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.gambar{
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.list{
+  list-style-type: square;
+}

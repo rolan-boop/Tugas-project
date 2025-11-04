@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #b7d4d5;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background-color: #e1eff0;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: white;
+  border: 1px solid #aaa;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(180deg, #73b3d3, #4a90b0);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 0 0 20px 20px;
+}
+
+/* WELCOME TEXT */
+.welcome {
+  background-color: #3b3b3b;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* MENU SECTION */
+.menu-section {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.menu-box {
+  background-color: #38494b;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.menu-box h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.menu-box ul {
+  list-style: none;
+}
+
+.menu-box li {
+  background-color: #6e6b68;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.menu-box li span {
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-box img {
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2c3a3b;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.footer-content p {
+  margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-box {
+    font-size: 14px;
+  }
+}

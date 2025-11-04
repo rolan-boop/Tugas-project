@@ -1,82 +1,97 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 80px;
-}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-header h1 {
-    font-size: 18px;
-    color: #000;
-    letter-spacing: 1px;
-    position: relative;
-    right: 60px;
-}
+  body {
+      background-color: #6c9ba9;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+  }
 
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    margin-left: 25px;
-}
+  header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0px 20px;
+      background-color: #6c9ba9;
+  }
 
-nav a.active {
-    color: #8a5615;
-}
+  header img {
+      width: 300px;
+      position: absolute;
+      left: 10%;
+      bottom: -150px;
+      transform: translateX(-50%);
+  }
 
-.login {
-    background-color: #cfd3d4;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 15px;
-    font-weight: bold;
-    color: #000;
-    margin-left: 25px;
-    cursor: pointer;
-}
+  nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 25px;
+      position: relative;
+      left: 650px;
+  }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
+  nav a.active {
+      color: #8a5615;
+  }
 
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+  .login {
+      background-color: #cfd3d4;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 15px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+  }
 
-.nav-links a.active {
-    color: #8a5615;
-}
+  .nav-links {
+      display: flex;
+      gap: 25px;
+  }
 
-.nav-links a:hover {
-    color: wheat;
-}
+  .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s;
+  }
 
-.login:hover{
-    background-color: black;
-    color: wheat;
-}
+  .nav-links a.active {
+      color: #8a5615;
+  }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 5px;
-    position: absolute;
-    top: 18px;
-    right: 20px;
-    z-index: 1000;
-}
+  .nav-links a:hover {
+      color: wheat;
+  }
 
-.hamburger div {
-    width: 28px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
-    transition: 0.3s;
-}
+  .login:hover{
+      background-color: black;
+      color: wheat;
+  }
+
+  .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 5px;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      z-index: 1000;
+  }
+
+  .hamburger div {
+      width: 28px;
+      height: 3px;
+      background-color: #000;
+      border-radius: 2px;
+      transition: 0.3s;
+  }

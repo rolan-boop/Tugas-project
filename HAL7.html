@@ -1,83 +1,215 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rafjen Restorant</title>
-  <link rel="stylesheet" href="style(adit).css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELOMPOK IV RESTORANT - Beranda</title>
+    <link rel="stylesheet" href="style(adit).css">
+    <style>
+        /* CSS Khusus untuk Landing Page */
+        .hero-banner {
+            background: linear-gradient(135deg, #7997a3, #4a6a75); /* Gradasi warna banner */
+            color: white;
+            padding: 80px 0 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 5px solid #333;
+        }
+        .recruitment-box {
+            background-color: #5c8597;
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-banner p {
+            font-size: 0.9em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tiga kolom menu */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu-column {
+            background-color: #8cbbcc; /* Warna kotak kolom menu */
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .menu-column h3 {
+            text-align: center;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #333;
+        }
+
+        .menu-item-card {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .item-number {
+            background-color: #e0ac5b; /* Warna latar belakang nomor */
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        
+        .item-info {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-subtitle {
+            font-size: 0.7em;
+            opacity: 0.8;
+        }
+
+        .item-image-small {
+            width: 35px;
+            height: 35px;
+            background-color: #aaa; /* Placeholder Gambar */
+            border-radius: 3px;
+            margin-left: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5em;
+            font-style: italic;
+        }
+
+    </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-content">
-      <h1 class="logo">RAFJEN RESTORANT</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Pesanan</a></li>
-          <li><a href="#">Tentang Kami</a></li>
-        </ul>
-      </nav>
-      <button class="login-btn">LOGIN</button>
-    </div>
-  </header>
 
-  <!-- BANNER -->
-  <section class="banner">
-    <h2>OPEN RECRUITMENT</h2>
-  </section>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">KELOMPOK IV RESTORANT</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#">Pemesanan</a></li>
+                    <li><a href="#">Tentang/Kontak</a></li>
+                    <li><a href="#" class="login-btn">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- WELCOME TEXT -->
-  <div class="welcome">
-    SELAMAT DATANG DI KELOMPOK IV RESTAURANT. KAMI MELAYANI ANDA DENGAN SEPENUH HATI ❤️
-  </div>
+    <main class="menu-page">
+        <div class="hero-banner">
+            <div class="recruitment-box">OPEN RECRUITMENT</div>
+            <p>DI-AJAK GABUNG DENGAN KELOMPOK IV RESTORANT. MARI WUJUDKAN IMPIAN DAN KARIR ANDA BERSAMA KAMI!</p>
+        </div>
 
-  <!-- MENU SECTION -->
-  <section class="menu-section">
-    <div class="menu-grid">
-      <div class="menu-box">
-        <h3>5 MENU FAVORITE</h3>
-        <ul>
-          <li><span>1.</span> <img src="https://via.placeholder.com/50" alt=""> Nasi Goreng Spesial</li>
-          <li><span>2.</span> <img src="https://via.placeholder.com/50" alt=""> Ayam Geprek</li>
-          <li><span>3.</span> <img src="https://via.placeholder.com/50" alt=""> Mie Goreng Jawa</li>
-          <li><span>4.</span> <img src="https://via.placeholder.com/50" alt=""> Sate Ayam</li>
-          <li><span>5.</span> <img src="https://via.placeholder.com/50" alt=""> Nasi Ayam Bakar</li>
-        </ul>
-      </div>
+        <div class="container">
+            <div class="menu-grid top-menus">
+                <div class="menu-column">
+                    <h3>1. MENU FAVORITE</h3>
+                    <div class="menu-item-card">
+                        <span class="item-number">1</span>
+                        <div class="item-info">
+                            <div class="item-text">
+                                <span class="item-title">TAKITOM</span>
+                                <span class="item-subtitle">Spicy Chicken</span>
+                            </div>
+                            <div class="item-image-small">[Img]</div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
 
-      <div class="menu-box">
-        <h3>5 MINUMAN FAVORITE</h3>
-        <ul>
-          <li><span>1.</span> <img src="https://via.placeholder.com/50" alt=""> Es Teh Manis</li>
-          <li><span>2.</span> <img src="https://via.placeholder.com/50" alt=""> Jus Alpukat</li>
-          <li><span>3.</span> <img src="https://via.placeholder.com/50" alt=""> Kopi Susu</li>
-          <li><span>4.</span> <img src="https://via.placeholder.com/50" alt=""> Es Jeruk</li>
-          <li><span>5.</span> <img src="https://via.placeholder.com/50" alt=""> Teh Tarik</li>
-        </ul>
-      </div>
+                <div class="menu-column">
+                    <h3>2. BULANAN FAVORITE</h3>
+                    <div class="menu-item-card"><span class="item-number">1</span><div class="item-info"><div class="item-text"><span class="item-title">TAKITOM</span><span class="item-subtitle">Spicy Chicken</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
 
-      <div class="menu-box">
-        <h3>5 MENU TERBARU</h3>
-        <ul>
-          <li><span>1.</span> <img src="https://via.placeholder.com/50" alt=""> Nasi Goreng Seafood</li>
-          <li><span>2.</span> <img src="https://via.placeholder.com/50" alt=""> Tongseng Ayam</li>
-          <li><span>3.</span> <img src="https://via.placeholder.com/50" alt=""> Udang Saus Padang</li>
-          <li><span>4.</span> <img src="https://via.placeholder.com/50" alt=""> Soto Betawi</li>
-          <li><span>5.</span> <img src="https://via.placeholder.com/50" alt=""> Nasi Bebek Madura</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+                <div class="menu-column">
+                    <h3>3. MENU TERBAIK</h3>
+                    <div class="menu-item-card"><span class="item-number">1</span><div class="item-info"><div class="item-text"><span class="item-title">TAKITOM</span><span class="item-subtitle">Spicy Chicken</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
+            </div>
+            
+            <div class="menu-grid bottom-menus" style="margin-top: 20px;">
+                <div class="menu-column">
+                    <h3>4. MENU TERBAIK</h3>
+                    <div class="menu-item-card"><span class="item-number">1</span><div class="item-info"><div class="item-text"><span class="item-title">TAKITOM</span><span class="item-subtitle">Spicy Chicken</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
-      <h4>ABOUT US</h4>
-      <p>📞 085272942480 | 📷 @kelompok4restorant</p>
-      <p>Jalan Thamrin No.4, Kelurahan Medan Kota, Kota Medan, Sumatera Utara 20212</p>
-    </div>
-  </footer>
+                <div class="menu-column">
+                    <h3>5. BULANAN FAVORITE</h3>
+                    <div class="menu-item-card"><span class="item-number">1</span><div class="item-info"><div class="item-text"><span class="item-title">TAKITOM</span><span class="item-subtitle">Spicy Chicken</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
+
+                <div class="menu-column">
+                    <h3>6. MENU TERBAIK</h3>
+                    <div class="menu-item-card"><span class="item-number">1</span><div class="item-info"><div class="item-text"><span class="item-title">TAKITOM</span><span class="item-subtitle">Spicy Chicken</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">2</span><div class="item-info"><div class="item-text"><span class="item-title">YAKITORI</span><span class="item-subtitle">Original</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">3</span><div class="item-info"><div class="item-text"><span class="item-title">UDON</span><span class="item-subtitle">Kari Kuah</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">4</span><div class="item-info"><div class="item-text"><span class="item-title">GYU RAMEN</span><span class="item-subtitle">Kuah Pedas</span></div><div class="item-image-small">[Img]</div></div></div>
+                    <div class="menu-item-card"><span class="item-number">5</span><div class="item-info"><div class="item-text"><span class="item-title">SUSHI</span><span class="item-subtitle">Salmon Roll</span></div><div class="item-image-small">[Img]</div></div></div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container about-us">
+            <p>ABOUT US</p>
+            <p>&#x1F4DE; 081231233145 | &#x1F4E7; @kelompokivrestorant</p>
+            <p>Jalan Thamrin No. X, Kelurahan Medan Kota, Kota Medan, Sumatera Utara 20212</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-

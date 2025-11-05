@@ -1,0 +1,110 @@
+body {
+  background-color: #eaf4f5;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+/* ====== Tabel ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+thead {
+  background-color: #00796b;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+tbody tr:hover {
+  background-color: #dff2f2;
+  transition: 0.3s;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #b3b3b3;
+}
+
+.btn-primary {
+  background-color: #00796b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #005f55;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 25px 15px;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}

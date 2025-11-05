@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-page {
+  background: linear-gradient(135deg, #f0fff0, #dff7df);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.success-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(40, 167, 69, 0.4);
+  animation: popIn 0.6s ease;
+}
+
+.checkmark {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  animation: scaleUp 0.6s ease-in-out;
+}
+
+.content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
+
+.content p {
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.btn-ok {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 50px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-ok:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 14px rgba(40, 167, 69, 0.4);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

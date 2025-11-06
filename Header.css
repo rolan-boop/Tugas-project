@@ -2,7 +2,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-}
+  }
 
   body {
       background-color: #6c9ba9;
@@ -45,6 +45,10 @@
 
   nav a.active {
       color: #8a5615;
+  }
+
+  .submenu select:hover{
+    color: wheat;
   }
 
   .login {

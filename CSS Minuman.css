@@ -1,8 +1,3 @@
-.login{
-    position: relative;
-    left: 700px;
-}
-
 .tabs {
       text-align: center;
       margin-top: 10px;
@@ -169,14 +164,20 @@
       .pesan-minuman input {
         width: 85%;
       }
-      
-      nav a, .login{
-        left: 70%;
-      }
 
-      .login{
-        margin-left: 20px;
-      }
+      nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav a, .submenu select {
+        font-size: 0.9rem;
+        position: relative;
+        left: 170px;
+    }
+
     }
 
     @media (max-width: 480px) {
@@ -209,45 +210,45 @@
         display: flex;
         align-items: center;
         position: relative;
-      }
+    }
 
-      .hamburger {
+    .hamburger {
         display: flex;
         flex-direction: column;
         gap: 4px;
         cursor: pointer;
         position: static;
         top: auto;
-      }
+    }
 
-      .hamburger div {
+    .hamburger div {
         width: 25px;
         height: 3px;
         background-color: #000;
         border-radius: 2px;
         transition: 0.3s;
         position: relative;
-        left: 330px;
-      }
+        left: 150px;
+    }
 
-      .nav-links {
+    .nav-links{
         display: none;
         flex-direction: column;
         position: absolute;
         top: 110%;
-        left: 205px;
+        right: -20px;
         background-color: rgba(0, 0, 0, 0.95);
         border-radius: 10px;
         width: 160px;
         padding: 10px 0;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
+    }
 
-      .nav-links.active {
+    .nav-links.active {
         display: flex;
-      }
+    }
 
-      .nav-links a {
+    .nav-links a {
         color: white;
         padding: 8px 10px;
         text-align: center;
@@ -255,35 +256,40 @@
         text-decoration: none;
         transition: background-color 0.3s ease;
         margin: 0;
-      }
+    }
 
-      .nav-links a:hover {
+    .submenu select{
+      color: white;
+      padding-left: 30px;
+    }
+
+    .nav-links a:hover {
         background-color: rgba(255, 255, 255, 0.1);
-      }
+    }
 
-      .login {
+    .login {
         background-color: white;
         color: black;
         border: none;
         border-radius: 15px;
         padding: 8px 10px;
-        margin: 5px -80px 5px;
+        margin: 5px 20px 5px;
         font-weight: bold;
         cursor: pointer;
         width: 100px;
         font-size: 0.9rem;
-      }
+    }
 
-      .login:hover {
+    .login:hover {
         background-color: #8a5615;
         color: white;
-      }
+    }
 
-      nav a {
+    nav a , .submenu select{
         margin-left: 0;
         position: static;
         left: auto;
-      }
+    }
 
       .tabs {
         display: flex;

@@ -164,7 +164,7 @@
         width: 100%;
     }
 
-    nav a {
+    nav a, .submenu select {
         font-size: 0.9rem;
         position: relative;
         left: 170px;
@@ -222,7 +222,7 @@
         left: 150px;
     }
 
-    .nav-links {
+    .nav-links{
         display: none;
         flex-direction: column;
         position: absolute;
@@ -249,6 +249,11 @@
         margin: 0;
     }
 
+    .submenu select{
+      color: white;
+      padding-left: 30px;
+    }
+
     .nav-links a:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
@@ -271,7 +276,7 @@
         color: white;
     }
 
-    nav a {
+    nav a , .submenu select{
         margin-left: 0;
         position: static;
         left: auto;

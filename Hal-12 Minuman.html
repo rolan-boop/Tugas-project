@@ -21,8 +21,14 @@
       <div class="nav-links" id="navLinks">
         <a href="#">Beranda</a>
         <a href="#" class="active">Pemesanan</a>
-        <a href="#">Tentang Kami</a>
-        <button class="login">LOGIN</button>
+        <div class="submenu">
+        <select onchange="location = this.value;">
+          <option value="tentang">Tentang Kami</option>
+          <option value="outlet">Outlet Toko</option>
+          <option value="sejarah">Sejarah</option>
+        </select>
+      </div>
+        <a href=""><button class="login">LOGIN</button></a>
       </div>
     </nav>
   </header>
@@ -164,8 +170,7 @@
 
   <script>
     function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('active');
     }
   </script>
 </body>

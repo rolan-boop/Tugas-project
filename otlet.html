@@ -74,7 +74,7 @@
       [35.6895,139.6917],[34.6937,135.5023],[35.0116,135.7681],
       [33.5902,130.4017],[43.0618,141.3545],[35.1815,136.9066]
     ];
-    japanCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Jepang - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    japanCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di Jepang - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 11 China
     const chinaCoords = [
@@ -82,7 +82,7 @@
       [30.5728,104.0668],[30.2741,120.1551],[30.5928,114.3055],[34.3416,108.9398],
       [32.0603,118.7969],[29.4316,106.9123],[39.3434,117.3616]
     ];
-    chinaCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di China - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    chinaCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di China - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 56 Eropa
     const europeCoords = [];
@@ -96,7 +96,7 @@
       const jitter = (Math.random()-0.5)*0.5;
       europeCoords.push([city[0]+jitter, city[1]+jitter]);
     }
-    europeCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Eropa - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    europeCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di Eropa - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 30 Indonesia
     const indoCities = [
@@ -107,7 +107,7 @@
     while(branches.filter(b=>b.name.includes("Indonesia")).length < 30){
       const city = indoCities[Math.floor(Math.random()*indoCities.length)];
       const jitter = (Math.random()-0.5)*0.5;
-      branches.push({name:`Cabang JEFR di Indonesia - ke ${branches.filter(b=>b.name.includes("Indonesia")).length+1}`, lat:city[0]+jitter, lng:city[1]+jitter});
+      branches.push({name:`Cabang JEFR Restaurant di Indonesia - ke ${branches.filter(b=>b.name.includes("Indonesia")).length+1}`, lat:city[0]+jitter, lng:city[1]+jitter});
     }
 
     // 5. Tambahkan semua marker ke map
@@ -119,3 +119,4 @@
   </script>
 </body>
 </html>
+

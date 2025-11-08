@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEFR Restorant Global</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
+    body, html { height:100%; background:#f8f8f6; }
+    header {
+      background-color: #1c1c1c;
+      color: #f1c40f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+    }
+    .logo { font-weight: bold; font-size: 20px; }
+    nav a { color:white; text-decoration:none; margin:0 15px; font-size:16px; transition:0.3s; }
+    nav a:hover { color:#f1c40f; }
+    .login-btn { background:#f1c40f; color:#1c1c1c; border:none; padding:6px 16px; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.3s; }
+    .login-btn:hover { background:#fff; }
+    #map { position: absolute; top:60px; left:0; right:0; bottom:0; height:calc(100% - 60px); z-index:1; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">JEFR RESTORANT</div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Sejarah Restoran</a>
+      <a href="#">Outlet Kami</a>
+    </nav>
+    <button class="login-btn">Login</button>
+  </header>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // 1. Inisialisasi peta
+    const map = L.map('map').setView([20, 0], 2); // Pusat dunia
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // 2. Icon outlet (toko mini berwarna)
+    const storeIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/3733/3733132.png',
+      iconSize: [40,40],
+      iconAnchor: [20,40],
+      popupAnchor: [0,-35]
+    });
+
+    // 3. Fungsi menambahkan marker
+    function addMarker(lat, lng, name) {
+      return L.marker([lat,lng], {icon:storeIcon}).addTo(map).bindPopup(name);
+    }
+
+    // 4. Data cabang
+    const branches = [];
+
+    // 1 Medan
+    branches.push({name:"JEFR Medan", lat:3.5952, lng:98.6722});
+
+    // 6 Jepang
+    const japanCoords = [
+      [35.6895,139.6917],[34.6937,135.5023],[35.0116,135.7681],
+      [33.5902,130.4017],[43.0618,141.3545],[35.1815,136.9066]
+    ];
+    japanCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Jepang - ke ${i+1}`, lat:c[0], lng:c[1]}));
+
+    // 11 China
+    const chinaCoords = [
+      [39.9042,116.4074],[31.2304,121.4737],[23.1291,113.2644],[22.5431,114.0579],
+      [30.5728,104.0668],[30.2741,120.1551],[30.5928,114.3055],[34.3416,108.9398],
+      [32.0603,118.7969],[29.4316,106.9123],[39.3434,117.3616]
+    ];
+    chinaCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di China - ke ${i+1}`, lat:c[0], lng:c[1]}));
+
+    // 56 Eropa
+    const europeCoords = [];
+    const europeCities = [
+      [48.8566,2.3522],[51.5074,-0.1278],[52.52,13.4050],[41.9028,12.4964],[40.4168,-3.7038],
+      [45.4642,9.1900],[50.1109,8.6821],[55.7558,37.6173],[59.3293,18.0686],[60.1695,24.9354],
+      [52.3676,4.9041],[47.4979,19.0402],[48.2082,16.3738],[50.0755,14.4378],[59.9139,10.7522]
+    ];
+    while(europeCoords.length < 56){
+      const city = europeCities[Math.floor(Math.random()*europeCities.length)];
+      const jitter = (Math.random()-0.5)*0.5;
+      europeCoords.push([city[0]+jitter, city[1]+jitter]);
+    }
+    europeCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Eropa - ke ${i+1}`, lat:c[0], lng:c[1]}));
+
+    // 30 Indonesia
+    const indoCities = [
+      [-6.2088,106.8456],[-6.9175,107.6191],[-7.2575,112.7521],[-8.65,115.2167],
+      [-0.5071,101.4478],[-2.9833,104.7641],[-3.3190,114.5900],[-7.7956,110.3695],
+      [-2.9707,104.7754],[-6.1745,106.8272],[-6.9147,107.6098],[-0.7893,113.9213]
+    ];
+    while(branches.filter(b=>b.name.includes("Indonesia")).length < 30){
+      const city = indoCities[Math.floor(Math.random()*indoCities.length)];
+      const jitter = (Math.random()-0.5)*0.5;
+      branches.push({name:`Cabang JEFR di Indonesia - ke ${branches.filter(b=>b.name.includes("Indonesia")).length+1}`, lat:city[0]+jitter, lng:city[1]+jitter});
+    }
+
+    // 5. Tambahkan semua marker ke map
+    branches.forEach(b=>addMarker(b.lat,b.lng,b.name));
+
+    // 6. Fit map ke semua marker
+    const group = L.featureGroup(branches.map(b=>L.marker([b.lat,b.lng])));
+    map.fitBounds(group.getBounds().pad(0.2));
+  </script>
+</body>
+</html>

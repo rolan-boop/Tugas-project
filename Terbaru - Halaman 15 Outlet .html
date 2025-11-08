@@ -9,7 +9,8 @@
 
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
-    body, html { height:100%; background:#f8f8f6; }
+    body, html { height:100%; background:#f8f8f6; display:flex; flex-direction:column; }
+
     header {
       background-color: #1c1c1c;
       color: #f1c40f;
@@ -26,7 +27,78 @@
     nav a:hover { color:#f1c40f; }
     .login-btn { background:#f1c40f; color:#1c1c1c; border:none; padding:6px 16px; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.3s; }
     .login-btn:hover { background:#fff; }
-    #map { position: absolute; top:60px; left:0; right:0; bottom:0; height:calc(100% - 60px); z-index:1; }
+
+
+    #map {
+      flex: 1;
+      margin-top: 0px; 
+      height: 20vh; 
+      z-index:1;
+    }
+
+    footer {
+      background-color: #dbd1d1;
+      color: #000;
+      padding: 25px 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    footer h3 {
+      color: #000;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    footer p, footer li, footer a {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    footer ul { list-style: none; }
+
+    .melayani span {
+      display: inline-block;
+      background-color: #162a2c;
+      color: #fff;
+      padding: 5px 8px;
+      margin: 3px 3px 3px 0;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .melayani, .cari, .social, .awal {
+      margin-left: 50px;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      background-color: #212121;
+      color: rgb(156, 155, 155);
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .gambar {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .list {
+      list-style-type: square;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +146,7 @@
       [35.6895,139.6917],[34.6937,135.5023],[35.0116,135.7681],
       [33.5902,130.4017],[43.0618,141.3545],[35.1815,136.9066]
     ];
-    japanCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di Jepang - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    japanCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Jepang - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 11 China
     const chinaCoords = [
@@ -82,7 +154,7 @@
       [30.5728,104.0668],[30.2741,120.1551],[30.5928,114.3055],[34.3416,108.9398],
       [32.0603,118.7969],[29.4316,106.9123],[39.3434,117.3616]
     ];
-    chinaCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di China - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    chinaCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di China - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 56 Eropa
     const europeCoords = [];
@@ -96,7 +168,7 @@
       const jitter = (Math.random()-0.5)*0.5;
       europeCoords.push([city[0]+jitter, city[1]+jitter]);
     }
-    europeCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR Restaurant di Eropa - ke ${i+1}`, lat:c[0], lng:c[1]}));
+    europeCoords.forEach((c,i)=>branches.push({name:`Cabang JEFR di Eropa - ke ${i+1}`, lat:c[0], lng:c[1]}));
 
     // 30 Indonesia
     const indoCities = [
@@ -107,7 +179,7 @@
     while(branches.filter(b=>b.name.includes("Indonesia")).length < 30){
       const city = indoCities[Math.floor(Math.random()*indoCities.length)];
       const jitter = (Math.random()-0.5)*0.5;
-      branches.push({name:`Cabang JEFR Restaurant di Indonesia - ke ${branches.filter(b=>b.name.includes("Indonesia")).length+1}`, lat:city[0]+jitter, lng:city[1]+jitter});
+      branches.push({name:`Cabang JEFR di Indonesia - ke ${branches.filter(b=>b.name.includes("Indonesia")).length+1}`, lat:city[0]+jitter, lng:city[1]+jitter});
     }
 
     // 5. Tambahkan semua marker ke map
@@ -117,6 +189,58 @@
     const group = L.featureGroup(branches.map(b=>L.marker([b.lat,b.lng])));
     map.fitBounds(group.getBounds().pad(0.2));
   </script>
+
+
+  <footer>
+    <div class="awal">
+      <h3>RESTAURANT K4</h3>
+      <p>Jalan Thamrin No. 8<br>Kota Medan, Sumatera Utara 20212</p>
+      <p>Telp : (0411) 112234 <br>Email : kelompok4restaurant.com</p>
+      <br>
+      <h4>Contact Person:</h4>
+      <p>Amar 0812 8711 5566<br>Amir 0851 0837 7788<br>Umar 0852 5586 8899</p>
+    </div>
+
+    <div class="melayani">
+      <h3>MELAYANI</h3>
+      <span>Prasmanan</span>
+      <span>Nasi Dos</span>
+      <span>Snack Dos</span>
+      <span>Coffee Break</span>
+      <span>Dll.</span>
+      <br>
+      <br>
+      <h3>DOWNLOAD</h3>
+      <ul>
+        <li>Daftar Menu</li>
+        <li class="list">Brosur Catering</li>
+        <li class="list">Brosur Wedding</li>
+        <li>Catalogue</li>
+      </ul>
+    </div>
+
+    <div class="cari">
+      <h3>LINKS</h3>
+      <ul>
+        <li class="list">Beranda</li>
+        <li class="list">Menu</li>
+        <li class="list">Catering</li>
+        <li class="list">Fasilitas</li>
+        <li class="list">Galeri</li>
+        <li class="list">Testimoni</li>
+        <li class="list">Info</li>
+        <li class="list">Kontak</li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <h3>IKUTI KAMI</h3>
+      <a href="#"> <img src="img/facebook.png" alt="" class="gambar">Facebook</a>
+      <a href="#"> <img src="img/instagram.png" alt="" class="gambar">Instagram</a>
+      <a href="#"> <img src="img/youtube.png" alt="" class="gambar">YouTube</a>
+    </div>
+  </footer>
+
+
 </body>
 </html>
-
